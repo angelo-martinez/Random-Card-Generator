@@ -6,14 +6,20 @@ window.onload = () => {
   var x = document.querySelector("#topish");
   var y = document.querySelector("#bottomish");
   var suit = cardsuits();
+  // color algorithim
+  if (suit === "\u2660") {
+    document.body.style.color = "red";
+  } else if (suit === "\u2665") {
+    document.body.style.color = "red";
+  } else {
+    document.body.style.color = "black";
+  }
 
   x.innerHTML = suit;
   y.innerHTML = suit;
   //middle number selction
   document.querySelector("#midnum").innerHTML = cardmiddle();
 };
-// suit type algorithim
-
 // middle number algorithim
 let cardmiddle = () => {
   let cardnumbers = [
@@ -37,6 +43,7 @@ let cardmiddle = () => {
 
   return cardnumbers[cardindex];
 };
+// suit type algorithim
 let cardsuits = () => {
   let suittype = ["\u2660", "\u2663", "\u2665", "\u2666"];
 
